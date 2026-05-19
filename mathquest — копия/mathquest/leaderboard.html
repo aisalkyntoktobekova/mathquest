@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MathQuest — Leaderboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo">
+      <a href="index.html" style="text-decoration:none;display:flex;align-items:center;gap:8px">
+        <span class="logo-icon">∑</span>
+        <span class="logo-text">MathQuest</span>
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="quiz.html" class="nav-link">Play</a>
+      <a href="leaderboard.html" class="nav-link active">Leaderboard</a>
+      <a href="profile.html" class="nav-link">Profile</a>
+    </div>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle">🌙</button>
+      <div class="nav-score">
+        <span class="score-icon">⭐</span>
+        <span id="navScore">0</span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="lb-main">
+    <div class="section-header" style="margin-top:2rem">
+      <h2>🏆 <span class="gradient-text">Leaderboard</span></h2>
+      <p>Top Math Champions This Week</p>
+    </div>
+
+    <!-- Top 3 podium -->
+    <div class="podium">
+      <div class="podium-item second">
+        <div class="podium-avatar">🧑‍🎓</div>
+        <div class="podium-name" id="p2name">Alex</div>
+        <div class="podium-score" id="p2score">820 XP</div>
+        <div class="podium-rank">2nd</div>
+        <div class="podium-block second-block">2</div>
+      </div>
+      <div class="podium-item first">
+        <div class="podium-crown">👑</div>
+        <div class="podium-avatar">🧑‍💻</div>
+        <div class="podium-name" id="p1name">Jordan</div>
+        <div class="podium-score" id="p1score">1200 XP</div>
+        <div class="podium-rank">1st</div>
+        <div class="podium-block first-block">1</div>
+      </div>
+      <div class="podium-item third">
+        <div class="podium-avatar">👩‍🎓</div>
+        <div class="podium-name" id="p3name">Sam</div>
+        <div class="podium-score" id="p3score">650 XP</div>
+        <div class="podium-rank">3rd</div>
+        <div class="podium-block third-block">3</div>
+      </div>
+    </div>
+
+    <!-- Full leaderboard table -->
+    <div class="lb-table-wrapper">
+      <table class="lb-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Player</th>
+            <th>Level</th>
+            <th>Accuracy</th>
+            <th>XP</th>
+          </tr>
+        </thead>
+        <tbody id="lbTableBody">
+          <!-- Filled by JS -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Your position -->
+    <div class="your-position" id="yourPosition">
+      <span>Your Position:</span>
+      <strong id="yourRank">—</strong>
+      <span>·</span>
+      <strong id="yourXP">0 XP</strong>
+    </div>
+
+    <div style="text-align:center;margin-top:2rem">
+      <a href="quiz.html" class="btn btn-primary">Play to Improve Your Rank →</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-logo">
+      <span class="logo-icon">∑</span>
+      <span class="logo-text">MathQuest</span>
+    </div>
+    <p class="footer-text">Made with ❤️ for math lovers · University Final Project 2025</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/leaderboard.js"></script>
+</body>
+</html>
